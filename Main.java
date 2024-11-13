@@ -85,18 +85,18 @@ public class Main {
     }
 
     private static void showReport() {
-        StringBuilder report = new StringBuilder("Student Report:\n");
+        StringBuilder report = new StringBuilder("Student Report: [total: " + students.size() + "]\n");
         double totalIncoming = 0;
         for (int i = 0; i < students.size(); i++) {
             report.append((i + 1)).append(". ").append(students.get(i)).append("\n");
             totalIncoming += students.get(i).getInvoiceAmount();
         }
 
-        report.append("\nStaff Report:\n");
+        report.append("\nStaff Report: [total: " + staffMembers.size() + "]\n");
         double totalOutgoing = 0;
         for (int i = 0; i < staffMembers.size(); i++) {
             report.append((i + 1)).append(". ").append(staffMembers.get(i)).append("\n");
-            totalOutgoing += staffMembers.get(i).getBiWeeklySalary();
+            totalOutgoing += staffMembers.get(i).getInvoiceAmount();
         }
 
         double netBalance = totalIncoming - totalOutgoing;

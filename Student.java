@@ -12,16 +12,16 @@ public class Student {
     }
 
     private double calculateFee() {
-        int baseFee = 3000;
-        return baseFee + (year - 1) * 100;
+        int baseFee = 2900;
+        return baseFee + (year * 100);
     }
 
     public double getInvoiceAmount() {
-        return fee / 2;
+        return calculateFee();
     }
 
     @Override
     public String toString() {
-        return "Student: " + name + ", Address: " + address + ", Year: " + year + ", Fee: $" + String.format("%.2f", getInvoiceAmount());
+        return "name = " + name + ", address = " + address + ", year =  " + year + ", fee = $" + String.format("%.2f", getInvoiceAmount());
     }
 }

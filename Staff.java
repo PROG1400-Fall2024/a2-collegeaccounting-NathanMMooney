@@ -17,12 +17,12 @@ public class Staff {
         return baseSalary + (yearsOfService * stepIncrease);
     }
 
-    public double getBiWeeklySalary() {
-        return salary / 26;
+    public double getInvoiceAmount() {
+        return calculateSalary();
     }
 
     @Override
     public String toString() {
-        return "Staff: " + name + ", Address: " + address + ", Years of Service: " + yearsOfService + ", Salary: $" + String.format("%.2f", getBiWeeklySalary());
+        return "name =  " + name + ", address =  " + address + ", years =  " + yearsOfService + ", pay = $" + String.format("%.2f", getInvoiceAmount());
     }
 }
