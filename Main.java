@@ -25,18 +25,22 @@ public class Main {
 
     private static void addStudent() {
         String name = getInput("Enter Student Name");
-        if (name == null) return;
+        if (name == null)
+            return;
 
         String address = getInput("Enter Student Address");
-        if (address == null) return;
+        if (address == null)
+            return;
 
         int year;
         while (true) {
             String yearStr = getInput("Enter Student Year (1-4)");
-            if (yearStr == null) return;
+            if (yearStr == null)
+                return;
             try {
                 year = Integer.parseInt(yearStr);
-                if (year >= 1 && year <= 4) break;
+                if (year >= 1 && year <= 4)
+                    break;
                 else showMessage("Please enter a year between 1 and 4");
             } catch (NumberFormatException e) {
                 showMessage("Please enter a number");
@@ -48,18 +52,22 @@ public class Main {
 
     private static void addStaff() {
         String name = getInput("Enter Staff Name");
-        if (name == null) return;
+        if (name == null)
+            return;
 
         String address = getInput("Enter Staff Address");
-        if (address == null) return;
+        if (address == null)
+            return;
 
         int yearsOfService;
         while (true) {
             String yearsStr = getInput("Enter Years of Service");
-            if (yearsStr == null) return;
+            if (yearsStr == null)
+                return;
             try {
                 yearsOfService = Integer.parseInt(yearsStr);
-                if (yearsOfService > 0 && yearsOfService < 30) break;
+                if (yearsOfService > 0 && yearsOfService < 30)
+                    break;
                 else showMessage("Please enter years between 1 and 29");
             } catch (NumberFormatException e) {
                 showMessage("Please enter a number");
